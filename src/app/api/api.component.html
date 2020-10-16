@@ -1,0 +1,27 @@
+<h1>Ma page API</h1>
+
+<p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent non purus sollicitudin, dictum eros sed, condimentum felis. Phasellus dui lorem, pretium at mi a, accumsan commodo neque. Pellentesque mattis neque et ligula blandit, ac cursus elit dignissim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse potenti. Maecenas rutrum lectus nec justo tincidunt scelerisque. Vestibulum pharetra mi sed justo finibus, sit amet tincidunt nulla pulvinar.
+
+    Aliquam quam arcu, suscipit sit amet est eu, blandit convallis justo. Nullam nisl massa, placerat nec sodales quis, rhoncus sit amet ipsum. Sed pulvinar in augue a commodo. Phasellus sit amet vehicula ipsum. Maecenas hendrerit fringilla elit, ut auctor magna egestas at. Aenean luctus risus mi, vel euismod mi sodales sit amet. Donec nisi tortor, blandit a vestibulum vitae, consequat ut risus. Quisque quis sodales mi.</p>
+
+<div *ngFor="let nbaPlayers of allnbaPlayers | slice:0:50;">
+    <nb-accordion classe="acco">
+        <nb-accordion-item>
+         <nb-accordion-item-header class="accoHeader"><h4>{{nbaPlayers.player_name}}</h4></nb-accordion-item-header>
+         <nb-accordion-item-body class="accoItem">
+            <h6>Equipe : {{nbaPlayers.team_abbreviation}}</h6>
+            <p>Age : {{nbaPlayers.age}}</p>
+            <p>Taille : {{nbaPlayers.player_height}}cm</p>
+            <p>Poids : {{nbaPlayers.player_weight}}</p>
+            <p>Pays : {{nbaPlayers.country}}</p>
+            <p>Ecole : {{nbaPlayers.college}}</p>
+            <p>Nombre de points (moyn) : {{nbaPlayers.pts}}</p>
+            <p>Nombre de rebonds (moyn) : {{nbaPlayers.reb}}</p>
+            <p>Nombre d'assists (moyn) : {{nbaPlayers.ast}}</p>
+            <p>Global rating : {{nbaPlayers.net_rating}}</p>
+         </nb-accordion-item-body>
+        </nb-accordion-item>
+       </nb-accordion>
+
+</div>

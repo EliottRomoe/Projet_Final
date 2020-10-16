@@ -1,0 +1,110 @@
+<h1>Ma page Algorithmique</h1>
+
+<p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent non purus sollicitudin, dictum eros sed, condimentum felis. Phasellus dui lorem, pretium at mi a, accumsan commodo neque. Pellentesque mattis neque et ligula blandit, ac cursus elit dignissim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse potenti. Maecenas rutrum lectus nec justo tincidunt scelerisque. Vestibulum pharetra mi sed justo finibus, sit amet tincidunt nulla pulvinar.</p>
+
+
+<h6> Voici un exemple d'algorithme réaliser en "PYTHON" </h6>
+
+<pre class="Code">hauteur = int(input("Entrez la hauteur de votre triangle entre 3 et 10 : "))                                                              
+    
+    taille = 2 * hauteur                                                                                                                   
+            
+    if hauteur > 9 or hauteur < 3:                                                                                                                          
+        print("Le nombre entré n'est pas correct")                                                                                                          
+    else:   
+        for i in range(taille):
+            nbrEspace = (taille - 1 - i)
+            ligne = nbrEspace * ' '
+            if i < hauteur:
+                nbrEtoile = (i * 2) + 1 
+                ligne += nbrEtoile * '*'
+            else :
+                nbrEtoile = ((i - hauteur) * 2 ) + 1
+                nbrEspaceInp = (taille - ((i - hauteur) * 2 + 1 )) 
+                ligne += nbrEtoile * '*' + nbrEspaceInp * ' ' + nbrEtoile * '*'
+    
+            print(ligne) 
+    <h6>RESULT CONSOL    -------------------------------------------- </h6>
+    Entrez la hauteur de votre triangle entre 3 et 10 : 5
+        
+              *
+             ***
+            *****
+           *******
+          *********
+         *         *
+        ***       ***
+       *****     *****
+      *******   *******
+     ********* *********
+
+        </pre>
+
+<h6> Voici un exemple de code en "PYTHON APPLICATIF" </h6>
+
+<pre class="Code">
+    class Rectangle:
+
+    def __init__(self, longeur, largeur):
+        self.longeur = longeur
+        self.largeur = largeur
+
+    def rectangle_area(self):
+        print("Surface :", self.longeur*self.largeur)
+
+    def rectangle_perimetre(self):
+        print("Périmètre :", 2 * self.longeur + 2 * self.largeur)
+
+
+    def nature_imprimante(self):
+        print("Ceci est un rectangle")
+
+
+class Carre(Rectangle) :
+
+    def __int__(self, longeur):
+        super().__init__(longeur, longeur)
+
+    def carre_area(self):
+        print("Surface :", self.longeur * self.longeur)
+
+    def perimetre_Carre(self):
+        print("Périmètre :", self.longeur * 4)
+
+    def nature_imprimante(self):
+        print("Ceci est un carré")
+
+
+
+class App:
+    def __init__(self, long, larg):
+
+        rectangle1 = Rectangle(long, larg)
+        carre1 = Carre(long, long)
+
+
+        rectangle1.rectangle_area()
+        rectangle1.rectangle_perimetre()
+        rectangle1.nature_imprimante()
+
+        carre1.rectangle_area()
+        carre1.perimetre_Carre()
+        carre1.nature_imprimante()
+
+if __name__ == "__main__":
+    longeur = int(input("Entrez la longeur du rectangle : "))
+    largeur = int(input("Entrez la largeur du rectangle : "))
+    myApp = App(longeur, largeur)
+
+<h6>RESULT CONSOL    -------------------------------------------- </h6>
+    Entrez la longeur du rectangle : 10
+    Entrez la largeur du rectangle : 5
+    Surface : 50
+    Périmètre : 30
+    Ceci est un rectangle
+    Surface : 100
+    Périmètre : 40
+    Ceci est un carré
+
+</pre>
